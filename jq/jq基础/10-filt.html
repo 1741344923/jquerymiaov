@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+                //filter : 过滤
+                // not : filter的反义词
+
+                //$("div").filter(".box").css("background","red");
+
+                $("div").not(".box").css("background","pink");
+            });
+        </script>
+    </head>
+    <body>
+        <div class="box">div1</div>
+        <div>div2</div>
+    </body>
+</html>

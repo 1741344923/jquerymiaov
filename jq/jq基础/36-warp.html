@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+                // .wrap() : 包装  给每一个span外面包裹一个div
+                //$("span").wrap("<div>");
+
+                // wrapAll() 整体包装 给三个span外面包裹一个div标签
+                //$("span").wrapAll("<div>");
+
+                // wrapInner() : 在内部包装
+                //$("span").wrapInner("<div>");
+
+                // unwrap() : 删除包装(删除父集：不包括body)
+                $("span").unwrap();
+            });
+        </script>
+    </head>
+    <body>
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+        <div>
+            <span>span</span>
+        </div>
+    </body>
+</html>

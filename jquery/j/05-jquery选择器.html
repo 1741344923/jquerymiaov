@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            li{
+                /*color: red;*/
+                font-size: 18px;
+            }
+        </style>
+        <script src="../jQuery/jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // #id选择器
+                // js document.backgroundColor = "";
+                //$("#b03").css("background","red");
+
+                // 设置被选择元素的样式属性 一个参数
+                /*var bg = $("#b03").css("color");
+                console.log(bg);*/
+
+                // 获取被选择元素的样式属性 两个参数
+                /*var bg = $("#b03").css("font-size");
+                console.log(bg);*/
+
+                //$(".liItem").css("color","blue");
+
+                //$("li").css("background","yellow");
+
+                // jQuery的一个特点：隐式迭代
+
+                // *通配符
+                //$("*").css("font-size","30px");
+
+                //,并集选择器
+                //$(".liItem,div").css("background","blue");
+
+                //$("#demo").css("background","red");
+
+                // 交集选择器
+                $("li.aa").css("font-size","40px");
+
+            });
+        </script>
+    </head>
+    <!--
+            css选择器回顾
+
+            基本选择器
+            id   #
+            .   类选择器
+            标签选择器
+            * 通配符选择器
+            ， 并集选择器
+
+            层级选择器
+            空格 后代选择器
+            +  紧邻选择器
+            >  子代选择器
+    -->
+    <body>
+        <ul>
+            <li class="liItem aa" id="demo">兄弟很多1</li>
+            <li>兄弟很多2</li>
+            <li id="b03">兄弟很多3</li>
+            <li>兄弟很多4</li>
+            <li class="liItem">兄弟很多5</li>
+            <li id="box">兄弟很多6</li>
+            <li>兄弟很多7</li>
+            <li class="liItem">兄弟很多8</li>
+        </ul>
+        <div class="aa">我是div的内容</div>
+    </body>
+</html>

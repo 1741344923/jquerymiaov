@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            div{
+                height: 200px;
+                background-color: pink;
+            }
+        </style>
+        <script src="../jQuery/jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#btnClick").click(function () {
+                    // 语句
+                    $("div").hide(1000);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" value="点击" id="btnClick">
+        <div></div>
+    </body>
+</html>

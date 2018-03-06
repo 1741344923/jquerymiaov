@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+                /*$("li").on("click",function () {
+                    $(this).css("background","red");
+                });*/
+
+                // 事件委托
+                $("ul").on('click','li',function () {
+                    $(this).css("background","red");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li>11111</li>
+            <li>11111</li>
+            <li>11111</li>
+            <li>11111</li>
+            <li>11111</li>
+        </ul>
+    </body>
+</html>

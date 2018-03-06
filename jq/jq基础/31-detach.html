@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+
+                // detach 跟remove方法一样，只不过会保留删除这个元素的操作行为
+                $("div").click(function () {
+                    alert(123);
+                });
+                var oDiv =$("div").detach();
+
+                $("body").append(oDiv);
+            });
+        </script>
+    </head>
+    <body>
+        <div>div1<span>span</span></div>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $(function(){
+                var result=['haha','7789798',5,3,4];
+                var str='';
+                for(var i=0;i<result.length;i++){
+                    str+='<li>'+result[i]+'</li>';
+                }
+                var dom=$('<ul>'+str+'</ul>');
+                $('body').append(dom);
+            });
+        </script>
+    </body>
+</html>

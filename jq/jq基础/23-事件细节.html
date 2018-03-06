@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+                /*$("div").click(function (ev) {
+                    // ev : event 对象
+                    // ev.pageX(相对于文档的) : clientX(相对于可视区)
+
+                    //ev.which : keyCode
+
+                    // 阻止默认事件
+                    ev.preventDefault();
+
+                    // 阻止冒泡的操作
+                    ev.stopPropagation();
+
+                    // 即阻止默认事件，又阻止冒泡的操作
+                    return false
+                });*/
+
+                $("div").one('click',function () {
+                    alert(123);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div>div</div>
+    </body>
+</html>

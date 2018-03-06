@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: absolute;
+            }
+        </style>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+                var disX = 0;
+                var disY = 0;
+                $('div').mousedown(function (ev) {
+                    disX = ev.pageX- $(this).offset().left;
+                    disY = ev.pageY-$(this).offset().top;
+
+                    $(document).mousemove(function (ev) {
+                        $("div").css('left',ev.pageX - disX);
+                        $("div").css('top',ev.pageY - disY);
+                    });
+
+                    $(document).mouseUp(function () {
+                        // off取消事件
+                        $(document).off();
+                    });
+
+                    // return false 即阻止默认事件，又阻止冒泡的操作
+                    return false
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

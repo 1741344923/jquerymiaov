@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{
+                margin:0;
+                padding: 0;
+            }
+            #div1{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                margin: 20px;
+                position: absolute;
+            }
+            #div2{
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+                margin: 30px;
+                position: absolute;
+                left: 25px;
+            }
+        </style>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+
+                // parent : 获取父集
+                // offsetParent : 获取有定位的父集
+
+                //$("#div2").parent().css('background','blue');
+
+                $("#div2").offsetParent().css('background','blue');
+            });
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <div id="div2"></div>
+        </div>
+    </body>
+</html>

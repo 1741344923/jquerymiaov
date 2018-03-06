@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jQuery/jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                //$("li").css("font-size","60px");
+
+                // 后代选择器
+                //$(".box li").css("background","red");
+
+                // 子代选择器
+                //$(".box>ul>li").css("font-size","60px");
+
+                //紧邻选择器
+                //$(".box + p").css("color","yellow");
+
+                // 兄弟选择器  自己不被选中。
+                $(".liItem~li").css("font-size","40px");
+
+            });
+
+            // jQuery的第二种入口函数
+            /*$(function () {
+
+            });*/
+        </script>
+    </head>
+    <body>
+        <div class="box">
+            <ul>
+                <li>
+                    姐妹很多1
+                    <p>
+                    <ul>
+                        <li>孩子很多</li>
+                        <li>孩子很多</li>
+                        <li>孩子很多</li>
+                    </ul>
+                    </p>
+                </li>
+                <li>姐妹很多2</li>
+                <li>姐妹很多3</li>
+                <li>姐妹很多4</li>
+                <li class="liItem">姐妹很多5</li>
+                <li>姐妹很多6</li>
+                <li>姐妹很多7</li>
+                <li>姐妹很多8</li>
+                <li>姐妹很多9</li>
+                <li>姐妹很多10</li>
+            </ul>
+        </div>
+        <p>
+            我是p元素
+        </p>
+        <div>
+            我是第一个div后面的兄弟div
+        </div>
+        <div>
+            我是第二个div后面的兄弟div
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+                // 索引就是当前元素在所有兄弟节点中的位置
+                alert($("#h").index());
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <h3>h3</h3>
+            <h2>h2</h2>
+            <h3 id="h">h3</h3>
+            <h2>h2</h2>
+        </div>
+    </body>
+</html>

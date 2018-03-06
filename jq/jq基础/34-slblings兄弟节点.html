@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+                // siblings 兄弟节点 括号里面也可以筛选
+                //$("span").siblings("em").css("background","red");
+
+                // nextAll (): 下面所有的兄弟节点,参数也是筛选功能
+                //$("span").nextAll().css("background","red");
+
+                // prevAll () ：上面的所有兄弟节点
+                //$("span").prevAll().css("background","blue");
+
+                // Until9() : 截止
+                $("span").nextUntil("h2").css("background","yellow");
+            });
+        </script>
+    </head>
+    <body>
+        <div>div</div>
+        <span>span</span>
+        <p>p</p>
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <em>em</em>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jQuery/jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // :odd 鸡数行
+                //$("li:odd").css("background","red");
+
+                // :even  偶数
+                //$("li:even").css("background","yellow");
+
+                // :eq(index) 选择到的是第五个，从0开始。。。
+                //$("li:eq(4)").css("font-size","30px");
+
+                // :lt(index) 小于6，选择到的是1-6，从0开始。
+                $("li:lt(6)").css("color","blue");
+
+                // :gt(index)
+                $("ul.box li:gt(7)").css("color","pink");
+
+                // :first 匹配的第一个
+                $("li:first").css("font-size","60px");
+
+                // :last 最后一个
+                $("li:last").css("background","red");
+
+            });
+        </script>
+    </head>
+    <body>
+        <ul class="box">
+            <li>男嘉宾1</li>
+            <li>男嘉宾2</li>
+            <li>男嘉宾3</li>
+            <li>男嘉宾4</li>
+            <li>男嘉宾5</li>
+            <li>男嘉宾6</li>
+            <li>男嘉宾7</li>
+            <li>男嘉宾8</li>
+            <li>男嘉宾9</li>
+            <li>男嘉宾10</li>
+        </ul>
+        <ul>
+            <li>男嘉宾1</li>
+            <li>男嘉宾2</li>
+            <li>男嘉宾3</li>
+            <li>男嘉宾4</li>
+            <li>男嘉宾5</li>
+            <li>男嘉宾6</li>
+            <li>男嘉宾7</li>
+            <li>男嘉宾8</li>
+            <li>男嘉宾9</li>
+            <li>男嘉宾10</li>
+        </ul>
+    </body>
+</html>

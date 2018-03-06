@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            div{
+                height: 200px;
+                background-color: pink;
+                margin-bottom: 20px;
+                display: none;
+            }
+        </style>
+        <script src="../jQuery/jquery-3.1.1.min.js"></script>
+        <script>
+            // 1、入口函数的方式
+            $(document).ready(function () {
+                $("#demo").click(function () {
+                   $("div").show(1000).html("我是内容");
+                });
+            });
+
+            // 2、入口函数的第二种方式，简写
+            $(function () {
+
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" value="我是按钮" id="demo">
+        <div></div>
+        <div></div>
+        <div></div>
+    </body>
+</html>

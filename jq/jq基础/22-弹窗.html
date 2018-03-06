@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #login{
+                width: 300px;
+                height: 300px;
+                border: 1px solid red;
+                position: absolute;
+            }
+            #close{
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        </style>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+
+                //创建一个div把它加到body里面
+                /*var oDiv =$("<div>div</div>");
+                $("body").append(oDiv);*/
+
+                $("#input1").click(function () {
+
+                    // 动态创建
+                    var oLogin = $('<div id="login"><p>用户名：<input type="text"></p><p>密码：<input type="text"></p><div id="close">x</div></div>');
+
+                    $("body").append(oLogin);
+
+                    oLogin.css('left',($(window).width()-oLogin.outerWidth())/2);
+
+                    oLogin.css('top',($(window).height()-oLogin.outerHeight())/2);
+
+                    // 关闭
+                    $("#close").click(function () {
+                        oLogin.remove();
+                    });
+
+                    // 让弹窗固定在浏览器可视区
+                    $(window).on('resize scroll',function () {
+
+                        oLogin.css('left',($(window).width()-oLogin.outerWidth())/2);
+                        oLogin.css('top',($(window).height()-oLogin.outerHeight())/2
+                        +$(window).scrollTop() );
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body style="height: 2000px;">
+        <input type="button" value="点击" id="input1">
+        <!--<div id="login">
+            <p>用户名：<input type="text"></p>
+            <p>密码：<input type="text"></p>
+            <div id="close">x</div>
+        </div>-->
+    </body>
+</html>

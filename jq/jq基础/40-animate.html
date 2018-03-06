@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #div1{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+            #div2{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                margin-top: 10px;
+            }
+        </style>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+                $("#div1").click(function () {
+
+                    /*$(this).animate({ width:300},2000,'linear',function () {
+                       $(this).animate({height:300});
+                    });*/
+
+                    // 链式操作
+                    // .delay(1000)延迟一秒钟在执行后续的高
+                    $(this).animate({width:300},2000).delay(1000).animate({height:300},2000);
+
+                });
+
+                $("#div2").click(function () {
+                    // stop 默认：只会阻止当前运动
+                    //$("#div1").stop();
+
+                    // stop(true) 阻止后续的运动
+                    //$("#div1").stop(true);
+
+                    // stop(true,true) 可以立即停止到指定的目标点
+                    //$("#div1").stop(true,true);
+
+                    // finish() 立即停止到所有指定的目标点
+                    //$("#div1").finish();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="div1"></div>
+        <div id="div2"></div>
+    </body>
+</html>

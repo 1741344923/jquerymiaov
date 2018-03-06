@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .box{
+                width: 300px;
+                height: 200px;
+                background-color: pink;
+                display: none;
+            }
+        </style>
+        <script src="../jQuery/jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // 添加class
+                $("div").addClass("box");
+
+                // 鼠标进入的时候让div以下拉的方式展示，斯莱德当
+                $("input[type='button']").mouseenter(function () {
+                    $(".divItem").slideDown(2000);
+                });
+
+                // 当鼠标点击的时候让div以上拉的方式隐藏，斯莱德奥普上拉
+                $("button:eq(0)").click(function () {
+                    $(".divItem").slideUp(2000);
+                });
+
+                // 当鼠标点击的时候切换
+                $("button:eq(1)").click(function () {
+                    $(".divItem").slideToggle(1000);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" value="下拉slideDown">
+        <button>下拉</button>
+        <button>切换</button>
+        <div class="divItem"></div>
+    </body>
+</html>

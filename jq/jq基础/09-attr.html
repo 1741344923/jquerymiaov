@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+                alert($("div").attr("title"));
+
+                $("div").attr("title","456");
+
+                $("div").attr("class","box");
+            });
+        </script>
+    </head>
+    <body>
+        <div title="123">div</div>
+    </body>
+</html>

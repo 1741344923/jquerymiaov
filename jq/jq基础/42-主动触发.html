@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+                /*$("#div1").on("click",function () {
+                    alert(123);
+                });
+
+                // 主动触发
+                $("#div1").trigger('click');*/
+
+                $("#div1").on("show",function () {
+                    alert(123);
+                });
+
+                $("#div1").on("show",function () {
+                    alert(456);
+                });
+
+                $("#div1").trigger('show');
+            });
+        </script>
+    </head>
+    <body>
+        <div id="div1">aaaa</div>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            ul{
+                list-style: none;
+            }
+            .wrap{
+                width: 330px;
+                height: 30px;
+                margin: 100px auto 0;
+                background-color: yellow;
+                padding-left: 10px;
+            }
+            .wrap ul:after{
+                content: '';
+                display: block;
+                clear: both;
+                height: 0;
+                overflow: hidden;
+                visibility: hidden;
+            }
+            .wrap ul li{
+                float: left;
+                width: 100px;
+                height: 30px;
+                margin-right: 10px;
+                background-color: pink;
+                position: relative;
+            }
+            .wrap ul li a{
+                text-decoration: none;
+                color: black;
+                display: block;
+                width: 100px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+            }
+            .wrap ul li ul{
+                position: absolute;
+                display: none;
+            }
+        </style>
+        <script src="../jQuery/jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                //  三种下拉实现
+
+                /*$(".wrap li").mouseenter(function () {
+                    $(this).children("ul").show();
+                });
+
+                $(".wrap li").mouseleave(function () {
+                    $(this).children("ul").hide();
+                });*/
+
+
+                /*$(".wrap li").hover(function () {
+                    // alert("1");
+                    $(this).children("ul").show();
+                },function () {
+                    $(this).children("ul").hide();
+                });*/
+
+
+                /*$(".wrap li").hover(function () {
+                    /!*alert("1");*!/
+                    var $this = $(this).children("ul");
+                    var isShow = $this.css("display");
+                    if (isShow === "block"){
+                        $this.hide();
+                    }else{
+                        $this.show();
+                    }
+                });*/
+
+
+                $(".wrap li").hover(function () {
+                    $(this).children("ul").slideToggle();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+            <ul class="">
+                <li>
+                    <a href="#">一级菜单1</a>
+                    <ul>
+                        <li>二级菜单1</li>
+                        <li>二级菜单1</li>
+                        <li>二级菜单1</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">一级菜单2</a>
+                    <ul>
+                        <li>二级菜单1</li>
+                        <li>二级菜单1</li>
+                        <li>二级菜单1</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">一级菜单3</a>
+                    <ul>
+                        <li>二级菜单1</li>
+                        <li>二级菜单1</li>
+                        <li>二级菜单1</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

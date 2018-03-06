@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/common/jquery-1.7.2.min.js"></script>
+        <script>
+            $(function () {
+                /*$("div").click(function () {
+                    alert(123);
+                });*/
+
+                /*$("div").on('click',function () {
+                    alert(123);
+                });*/
+
+                /*$("div").on('click mouseover',function () {
+                    alert(123);
+                });*/
+
+                /*$("div").on({
+                    'click':function () {
+                        alert(123);
+                    },
+                    'mouseover':function () {
+                        alert(456);
+                    }
+                });*/
+
+                $('div').on('click',function () {
+                    alert(123);
+                    // off 取消事件
+                    $("div").off();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div>div</div>
+        <span>span</span>
+    </body>
+</html>

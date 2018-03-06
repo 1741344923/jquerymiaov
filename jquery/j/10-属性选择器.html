@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../jQuery/jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // 属性选择器
+                //$("a[href]").css("background","red");
+
+                // [attr=value]
+                //$("a[href='http://web.itcast.cn']").css("font-size","60px");
+
+                // [attr|=value]  不等
+                //$("a[href!='http://www.baidu.com']").css("color","yellow");
+
+                // [attr^=value] 以http开头的
+                //$("a[href^='http']").css("color","red");
+
+                // [attr$=value] 以com结尾的
+                //$("a[href$='com']").css("font-size","30px");
+
+                // [attr*=value] 包含i的
+                //$("a[href*='i']").css("background","pink");
+
+                // [attr][attr] 都满足 交集
+                $("a[href][title*='的']").css("background","orange");
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="box">
+            <a href="www.baidu.com">百度</a>
+            <a href="http://web.itcast.cn" title="我是title的内容">前端移动</a>
+            <a href="http://sina.com.cn">新浪</a>
+            <a >
+                我没有href
+            </a>
+        </div>
+    </body>
+</html>
